@@ -21,7 +21,7 @@ github_username:  sauravjoshi23
 
 aux_links:
   "See on Github":
-    - "https://github.com/sauravjoshi23/GSoC-Neural-QA-Model-DBpedia"
+    - "https://github.com/dbpedia/neural-qa"
 
 # theme: minima
 remote_theme: just-the-docs/just-the-docs
