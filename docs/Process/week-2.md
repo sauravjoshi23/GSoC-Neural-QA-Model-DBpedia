@@ -83,4 +83,4 @@ During this step, templates are refined/transformed to a more natural and class-
 
 4. Superlative: The composite templates will be transformed. For example, `What is the networth of narrator of <A> ?` will be transformed to `What is the highest networth of narrator of <A> ?`.
 
-5. Numeric: Both simple, as well as composite templates, will be transformed. For example, `What is the child of <A> ?` will be transformed to `How many child did <A> have ?`, similarly a composite template - `What is the number of students of highschool of <A> ?` will be transformed to `How many students did highschool of <A> have ?`.
+5. Numeric: Both simple, as well as composite templates, will be transformed. For example, a simple template - `What is the child of <A> ?` will be transformed to `How many child did <A> have ?`, and a simple template with quantitative property - `What is the cost of <A> ?` will be transformed to `How much is the cost of <A> ?`, similarly a composite template - `What is the number of students of highschool of <A> ?` will be transformed to `How many students did highschool of <A> have ?`.
