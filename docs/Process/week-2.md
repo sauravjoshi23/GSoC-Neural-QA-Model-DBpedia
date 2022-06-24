@@ -50,8 +50,12 @@ dbo:Work;;;Who is the author of anthem of <A> ?;select ?x where { <A> dbo:anthem
 ```
 
 ## Benchmark 1
-<br>
-In Progress
+
+Benchmark 1 utilizes the calculation of f1-score between the answers of QALD sparql queries for its respective nlq (natural language question) and the answers of the model's prediction using existing templates i.e templates generated at the very start. The F1-score as predicted is 0 as the templates are very basic and similar result can be found in [blog](https://baiblanc.github.io/2020/08/19/GSOC-Week-Eleven/). Visualizations using wandb are presented below:
+
+![](../../assets/images/benchmark1_old.png)
+
+3 features were introduced in nspm core - validation loss, wandb, and gradient accumulation.
 
 ## Categorization of templates (Automation)
 
@@ -61,7 +65,7 @@ The final templates generated after elimination are categorized into 5 classes -
 
 1. Subordinate: All the simple and composite templates are a part of this class. For example, `What is the alma mater of <A> ?` is a part of the subordinate class.
 
-2. Con/disjunction: All the simple templates are included in this class. As the transformed templates of this class will contain 2 entities i.e `What is the child of <X> and <Y> ?`, the composite templates were becoming too complex hence they were not included.
+2. Con/disjunction: All the simple templates are included in this class. As the transformed templates of this class will contain 2 entities i.e `What is the child of <A> and <B> ?`, the composite templates were becoming too complex hence they were not included.
 
 3. Comparative: All simple templates and only composite templates that contain a quantitative secondary property or a "number" keyword will be included. A quantitative property is a property whose range value is of numeric type i.e xsd:integer, xsd:float, xsd:nonNegativeInteger, etc. For example, `What is the population total of birth place of <A> ?` will be included as "population total" is a quantitative secondary property with range value xsd:nonNegativeInteger. 
 
@@ -77,9 +81,9 @@ During this step, templates are refined/transformed to a more natural and class-
 
 1. Subordinate: The simple templates in this class will remain the same whereas the composite templates will be transformed. For example, `What is the birthplace of <A> ?` will remain the same but `What is the networth of narrator of <A> ?` will be transformed to `What is the networth of <A>'s narrator ?`.
 
-2. Con/disjunction: The simple templates will be transformed. For example, `What is the child of <A> ?` will be transformed to `What is the child of <X> and <Y> ?`, or ```What is the child of <X> as well as <Y> ?```.
+2. Con/disjunction: The simple templates will be transformed. For example, `What is the child of <A> ?` will be transformed to `What is the child of <A> and <B> ?`, or ```What is the child of <A> as well as <B> ?```.
 
-3. Comparative: Simple template such as `What is the child of <A> ?` will be transformed into `Did <A> have child ?` and `Is <X> child of <Y> ?`. Composite templates such as `What is the networth of narrator of <A> ?` will be transformed to `Give me all narrator of <A> with more than 100 networth ?`.
+3. Comparative: Simple template such as `What is the child of <A> ?` will be transformed into `Did <A> have child ?` and `Is <A> child of <B> ?`. Composite templates such as `What is the networth of narrator of <A> ?` will be transformed to `Give me all narrator of <A> with more than 100 networth ?`.
 
 4. Superlative: The composite templates will be transformed. For example, `What is the networth of narrator of <A> ?` will be transformed to `What is the highest networth of narrator of <A> ?`.
 
