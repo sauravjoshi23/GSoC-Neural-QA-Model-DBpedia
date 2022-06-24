@@ -51,7 +51,8 @@ dbo:Work;;;Who is the author of anthem of <A> ?;select ?x where { <A> dbo:anthem
 
 ## Benchmark 1
 
-Benchmark 1 utilizes the calculation of f1-score between the answers of QALD sparql queries for its respective nlq (natural language question) and the answers of the model's prediction using existing templates i.e templates generated at the very start. The F1-score as predicted is 0 as the templates are very basic and similar result can be found in [blog](https://baiblanc.github.io/2020/08/19/GSOC-Week-Eleven/). Visualizations using wandb are presented below:
+Benchmark 1 utilizes the calculation of f1-score between the answers of QALD sparql queries for its respective nlq (natural language question) and the answers of the model's prediction using existing templates i.e templates generated at the very start. The qald-9-train-multilingual.json file which is used as test set contained answers that were fetched from an older DBpedia version, hence they were updated using the latest DBpedia version and stored in a file named updated-qald-9-train-multilingual.json. The updated file was then used for evaluation. <br>
+The F1-score is 0.0 as the templates are very basic and similar result can be found in [blog](https://baiblanc.github.io/2020/08/19/GSOC-Week-Eleven/). Visualizations using wandb are presented below:
 
 ![](../../assets/images/benchmark1_old.png)
 
