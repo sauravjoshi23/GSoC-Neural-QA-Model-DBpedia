@@ -20,7 +20,7 @@ The resultant refined templates and their respective transformed SPARQL queries 
 ### Subordinate
 <div class="code-example" markdown="1">
 
-| template        | SPARQL | QGen template   | Transformed SPARQL |
+| template        | SPARQL | Refined template   | Transformed SPARQL |
 |:-------------|:------------------|:-------------|:------------------|
 | What is the parent of \<A> ? | select ?x where { \<A> dbo:parent ?x } | What is the parent of \<A> ? | select ?x where { \<A> dbo:parent ?x } |
 | What is the official school colour of university of \<A> ? | select ?x where { \<A> dbo:university ?x1 . ?x1 dbo:officialSchoolColour ?x } | What is the official school colour of \<A>'s university ?  | select ?x where { \<A> dbo:university ?x1 . ?x1 dbo:officialSchoolColour ?x } |
@@ -30,7 +30,7 @@ The resultant refined templates and their respective transformed SPARQL queries 
 ### Con/disjunction
 <div class="code-example" markdown="1">
 
-| template        | SPARQL | QGen template   | Transformed SPARQL |
+| template        | SPARQL | Refined template   | Transformed SPARQL |
 |:-------------|:------------------|:-------------|:------------------|
 | What is the alma mater of \<A> ? | select ?x where { \<A> dbo:almaMater ?x } | What is the alma mater of \<A> and \<B> ? | select ?x where { ?x dbo:almaMater \<A> . ?x dbo:almaMater \<B> } |
 | What is the predecessor of \<A> ? | select ?x where { \<A> dbo:predecessor ?x } | What is the predecessor of \<A> as well as \<B> ? | select ?x where { ?x dbo:predecessor \<A> . ?x dbo:predecessor \<B> } |
@@ -40,7 +40,7 @@ The resultant refined templates and their respective transformed SPARQL queries 
 ### Comparative
 <div class="code-example" markdown="1">
 
-| template        | SPARQL | QGen template   | Transformed SPARQL |
+| template        | SPARQL | Refined template   | Transformed SPARQL |
 |:-------------|:------------------|:-------------|:------------------|
 | What is the child of \<A> ? | select ?x where { \<A> dbo:child ?x } | Did \<A> have child ? | ask where { \<A> dbo:child ?x } |
 | What is the child of \<A> ? | select ?x where { \<A> dbo:child ?x } | Is \<A> child of \<B> ? | ask where { \<B> dbo:child \<A> } |
@@ -52,7 +52,7 @@ The resultant refined templates and their respective transformed SPARQL queries 
 ### Superlative
 <div class="code-example" markdown="1">
 
-| template        | SPARQL | QGen template   | Transformed SPARQL |
+| template        | SPARQL | Refined template   | Transformed SPARQL |
 |:-------------|:------------------|:-------------|:------------------|
 | What is the wins of owner of \<A> ? | select ?x where { \<A> dbo:owner ?x1 . ?x1 dbo:wins ?x } | What is the lowest wins of owner of \<A> ? | select ?x where { \<A> dbo:owner ?x1 . ?x1 dbo:wins ?x } order by asc(?x) limit 1 |
 | What is the number of undergraduate students of university of \<A> ? | select ?x where { \<A> dbo:university ?x1 . ?x1 dbo:numberOfUndergraduateStudents ?x } | What is the highest number of undergraduate students of university of \<A> ? | select ?x where { \<A> dbo:university ?x1 . ?x1 dbo:numberOfUndergraduateStudents ?x } order by desc(?x) limit 1 |
@@ -62,7 +62,7 @@ The resultant refined templates and their respective transformed SPARQL queries 
 ### Numeric
 <div class="code-example" markdown="1">
 
-| template        | SPARQL | QGen template   | Transformed SPARQL |
+| template        | SPARQL | Refined template   | Transformed SPARQL |
 |:-------------|:------------------|:-------------|:------------------|
 | What is the population total of \<A> ? | select ?x where { \<A> dbo:populationTotal ?x } | How much is the population total of \<A> ? | select ?x where { \<A> dbo:populationTotal ?x } | 
 | What is the child of \<A> ? | select ?x where { \<A> dbo:child ?x } | How many child did \<A> have ? | select count(*) as ?x where { \<A> dbo:child ?x } |
