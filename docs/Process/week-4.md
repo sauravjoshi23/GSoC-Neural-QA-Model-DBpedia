@@ -15,7 +15,7 @@ A simple overview of size of the database in terms of templates after each step 
 
 ## Paraphraser
 
-After a series of steps in the process of template discovery, the next step is to make the templates more natural using a  paraphraser. The T5 paraphraser is used and the technique using which the templates are paraphrased is found in Zheyuan's blog. A few examples of paraphrased templates of each class are presented below:
+After a series of steps in the process of template discovery, the next step is to make the templates more natural using a  paraphraser. The T5 paraphraser is used and the technique using which the templates are paraphrased is found in [Zheyuan's blog](https://baiblanc.github.io/2020/08/27/GSOC-Final-Report/). A few examples of paraphrased templates of each class are presented below:
 
 ### Subordinate
 <div class="code-example" markdown="1">
