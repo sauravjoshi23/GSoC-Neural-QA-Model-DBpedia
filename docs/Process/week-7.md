@@ -86,7 +86,7 @@ A testset of 20 templates was created to test this method because the training s
 | Is \<A> pronunciation of \<B> ? | How \<A> pronunciation of \<B> is used ? | refined | Incorrect | Incorrect |
 | When is the formation date of \<A>'s child organisation ? | When is \<A>'s child organisation formed ? | paraphrased | Incorrect | Correct |
 | Did \<A> have sire ? | Did \<A> have a sire in \<A> ? | refined | Correct | Correct |
-| Is \<A> denomination of \<B> ? | What is \<A> denomination of \<B>/<B> ? | refined | Incorrect | Incorrect |
+| Is \<A> denomination of \<B> ? | What is \<A> denomination of \<B>/\<B> ? | refined | Incorrect | Incorrect |
 | What is the instrument of \<A> ? | What are instruments of \<A> ? | paraphrased | Correct | Correct |
 | Is \<A> destination of \<B> ? | What is \<A> destination of \<B> ? | refined | Incorrect | Correct |
 | How much is the number of employees of \<A> ? | How much employees do \<A> have ? | paraphrased | Correct | Incorrect |
