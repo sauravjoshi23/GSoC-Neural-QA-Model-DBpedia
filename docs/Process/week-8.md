@@ -70,6 +70,10 @@ Here, as the output of the sparql query is true or false, entites needed to be s
 
 </div>
 
+## Template Discovery Pipeline
+
+![](../../assets/images/pipeline.png)
+
 ## Dataset
 
 Few examples from the dataset are presented below:

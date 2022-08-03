@@ -32,8 +32,8 @@ The resultant refined templates and their respective transformed SPARQL queries 
 
 | template        | SPARQL | Refined template   | Transformed SPARQL |
 |:-------------|:------------------|:-------------|:------------------|
-| What is the alma mater of \<A> ? | select ?x where { \<A> dbo:almaMater ?x } | What is the alma mater of \<A> and \<B> ? | select ?x where { ?x dbo:almaMater \<A> . ?x dbo:almaMater \<B> } |
-| What is the predecessor of \<A> ? | select ?x where { \<A> dbo:predecessor ?x } | What is the predecessor of \<A> as well as \<B> ? | select ?x where { ?x dbo:predecessor \<A> . ?x dbo:predecessor \<B> } |
+| What is the alma mater of \<A> ? | select ?x where { \<A> dbo:almaMater ?x } | What is the alma mater of \<A> and \<B> ? | select ?x where { \<A> dbo:almaMater ?x . \<B> dbo:almaMater ?x } |
+| What is the predecessor of \<A> ? | select ?x where { \<A> dbo:predecessor ?x } | What is the predecessor of \<A> as well as \<B> ? | select ?x where { \<A> dbo:predecessor ?x . \<B> dbo:predecessor ?x } |
 
 </div>
 
